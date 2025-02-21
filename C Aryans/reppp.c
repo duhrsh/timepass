@@ -14,35 +14,30 @@ int main() {
     printf("Enter the element to search: ");
     scanf("%d", &target);
 
-    // Binary Search
     int l = 0, r = n - 1, mid;
     while (l <= r) {
         mid = l + (r - l) / 2;
 
-        if (arr[mid] == target) {  // Found target
-            count++;  // First occurrence counted
+        if (arr[mid] == target) {
+            count++;
 
-            // Count left occurrences
             for (int i = mid - 1; i >= 0; i--) {
                 if (arr[i] == target)
                     count++;
             }
 
-            // Count right occurrences
             for (int i = mid + 1; i < n; i++) {
                 if (arr[i] == target)
                     count++;
             }
-
             break;
         }
-        else if (target > arr[mid])  // Move right
+        else if (target > arr[mid])
             l = mid + 1;
-        else  // Move left
+        else 
             r = mid - 1;
     }
 
-    // Print result
     if (count > 0)
         printf("%d appears %d times.\n", target, count);
     else
