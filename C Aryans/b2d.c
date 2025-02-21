@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int binaryToDecimal(int binary) {
+int b2d(int binary) {
     int decimal = 0, base = 1;
     
     while (binary > 0) {
@@ -18,7 +18,7 @@ int main() {
     printf("Enter a binary number: ");
     scanf("%d", &binary);
     
-    printf("Decimal equivalent: %d\n", binaryToDecimal(binary));
+    printf("Decimal equivalent: %d\n", b2d(binary));
     
     return 0;
 }
