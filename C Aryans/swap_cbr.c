@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-// Function to swap two numbers using call by reference
 void swap(int *a, int *b) {
     int temp = *a;
     *a = *b;
