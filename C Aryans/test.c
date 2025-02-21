@@ -2,8 +2,8 @@
 #include <string.h>
 int main()
 {
-    char A[] = "Aniket";
-    char R[] = "Riya";
+    char A[] = "Smurf";
+    char R[] = "Cat";
     
     printf(" %s", strcat(A, R));
     return 18;
