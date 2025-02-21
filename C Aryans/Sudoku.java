@@ -53,14 +53,14 @@ public class Sudoku {
                             if (solve()) {
                                 return true;
                             }
-                            board[row][col] = 0; // Backtrack
+                            board[row][col] = 0; // backtrack
                         }
                     }
-                    return false; // Trigger backtracking
+                    return false; //  backtracking triggereing just cuz why not
                 }
             }
         }
-        return true; // Solved
+        return true; 
     }
 
     // Fill the board with a valid Sudoku solution
@@ -83,28 +83,28 @@ public class Sudoku {
         for (int i = 0; i < SIZE * SIZE - clues; i++) {
             int row = rand.nextInt(SIZE);
             int col = rand.nextInt(SIZE);
-            while (board[row][col] == 0) { // Ensure we're removing a number
+            while (board[row][col] == 0) { // make sure that we're removing a number
                 row = rand.nextInt(SIZE);
                 col = rand.nextInt(SIZE);
             }
-            board[row][col] = 0; // Remove the number
+            board[row][col] = 0; // removing the number
         }
     }
 
     public static void main(String[] args) {
         Sudoku sudoku = new Sudoku();
         sudoku.fillBoard();
-        sudoku.createPuzzle(40); // Number of clues to keep
+        sudoku.createPuzzle(40); // number of clues to keep
 
         System.out.println("Sudoku Puzzle:");
-        sudoku.printBoard(false); // Print puzzle with 'X' for empty cells
+        sudoku.printBoard(false); // the puzzle with 'X' for empty cells
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Type 'SHOW' to see the solution:");
         String input = scanner.nextLine();
         if (input.equalsIgnoreCase("SHOW")) {
             System.out.println("Sudoku Solution:");
-            sudoku.printBoard(true); // Print full board with solution
+            sudoku.printBoard(true); // full board with solution
         }
 
         scanner.close();
