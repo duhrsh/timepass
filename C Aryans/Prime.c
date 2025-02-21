@@ -67,14 +67,13 @@
 
 #include <stdio.h>
 
-#define MAX_SIZE 10 // Maximum size for the matrix
+#define MAX_SIZE 1
 
 int main() {
     int matrix[MAX_SIZE][MAX_SIZE];
     int transposed[MAX_SIZE][MAX_SIZE];
     int rows, cols;
 
-    // Input dimensions of the matrix
     printf("Enter number of rows (max %d): ", MAX_SIZE);
     scanf("%d", &rows);
     printf("Enter number of columns (max %d): ", MAX_SIZE);
