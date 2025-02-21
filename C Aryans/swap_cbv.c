@@ -10,8 +10,7 @@ void swap(int a, int b) {
 int main() {
     int x, y;
     
-    // Accept values from user
-    printf("Enter two numbers: ");
+    printf("Enter two numbers: "); //from user
     scanf("%d %d", &x, &y);
 
     printf("Before swap: x = %d, y = %d\n", x, y);
